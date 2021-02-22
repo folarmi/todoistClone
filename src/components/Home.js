@@ -1,18 +1,31 @@
+import { useContext } from "react";
+// import { Link } from "react-router-dom";
+import { AuthContext } from "../context/Auth";
 import Banner from "./Banner";
-import Navbar from "./Navbar";
 import Details from "./Details";
 import EndSection from "./EndSection";
 import Mental from "./Mental";
 
 const Home = () => {
+  const { currentUser } = useContext(AuthContext);
   return (
-    <div>
-      <Navbar />
-      <Banner />
-      <Mental />
-      <Details />
-      <EndSection />
-    </div>
+    <>
+      {currentUser ? (
+        <div>
+          <Banner />
+          <Mental />
+          <Details />
+          <EndSection />
+        </div>
+      ) : (
+        <div>
+          <Banner />
+          <Mental />
+          <Details />
+          <EndSection />
+        </div>
+      )}
+    </>
   );
 };
 

@@ -3,6 +3,10 @@
   left: 11rem;
 }
 
+.bgImage {
+  background-image: url("./images/phonebg.png");
+}
+
 @media (min-width: 1024px) {
   .position {
     top: 9rem;
@@ -10,5 +14,9 @@
   }
   .chat {
     margin-top: -40rem;
+  }
+
+  .bgImage {
+    background-image: url("./images//banner.webp");
   }
 }

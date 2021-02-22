@@ -1,37 +1,35 @@
-import { useEffect, useState } from "react";
 import Review from "../UIComponents/Review";
 import { BsArrowRight } from "react-icons/bs";
 // import Testimonials from "./Testimonials";
 import task from "./../images/task.webp";
 import mission from "./../images/mission.webp";
-import review from "./../images/review.webp";
-import phonebg from "./../images/phonebg.png";
+// import review from "./../images/.webp";
 import { SectionWrapper } from "../layout/SectionWrapper";
 // import { AiOutlineAmazon } from "react-icons/ai";
 // import { AiFillFacebook } from "react-icons/ai";
 
 const Details = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const imageUrl = windowWidth >= 650 ? review : phonebg;
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const imageUrl = windowWidth <= 650 ? phonebg : review;
 
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+  // useEffect(() => {
+  //   const handleWindowResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
 
-    window.addEventListener("resize", handleWindowResize);
+  //   window.addEventListener("resize", handleWindowResize);
 
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
+  //   return () => {
+  //     window.removeEventListener("resize", handleWindowResize);
+  //   };
+  // }, []);
   return (
     <div>
       <section
-        className="text-center px-12 py-10 lg:flex lg:justify-between lg:text-left"
-        style={{ backgroundImage: `url(${imageUrl})` }}
+        className="text-center px-12 py-10 lg:flex lg:justify-between lg:text-left bgImage"
+        // style={{ backgroundImage: `url(${imageUrl})` }}
       >
+        <img src="" alt="" />
         <Review
           name="Google Play"
           company="Editor's Choice"
@@ -121,3 +119,23 @@ right now”"
 };
 
 export default Details;
+
+// <!-- The core Firebase JS SDK is always required and must be listed first -->
+// <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+// <!-- TODO: Add SDKs for Firebase products that you want to use
+//      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+// <script>
+//   // Your web app's Firebase configuration
+//   var firebaseConfig = {
+//     apiKey: "AIzaSyC3iv-VZUYOKQ092Y0jrz6LSy-tjgjg2fA",
+//     authDomain: "todoist-clone-f7025.firebaseapp.com",
+//     projectId: "todoist-clone-f7025",
+//     storageBucket: "todoist-clone-f7025.appspot.com",
+//     messagingSenderId: "641102497963",
+//     appId: "1:641102497963:web:d622160ca9e1e8b3090fee"
+//   };
+//   // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
+// </script>
